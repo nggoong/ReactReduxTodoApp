@@ -8,4 +8,4 @@
 
 1. combineReducers
 
-2. connect
+2. useSelector, useDispatch

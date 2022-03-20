@@ -1,9 +1,11 @@
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import TodoList from "../components/TodoList";
 import { changeInput, resetInput, toggle, insert, remove } from "../modules/todos";
 
-const TodoContainer = ({ todos, changeInput, resetInput, input, toggle, insert, remove }) => {
-
+const TodoContainer = ({ changeInput, resetInput, toggle, insert, remove }) => {
+    const todos = useSelector(state => state.todos.todos);
+    const input = useSelector(state => state.todos.input);
+    
     return(
         <TodoList todos={todos} input={input} onChangeInput={changeInput}
         onResetInput={resetInput}

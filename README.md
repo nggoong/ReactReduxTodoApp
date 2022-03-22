@@ -9,3 +9,7 @@
 1. combineReducers
 
 2. useSelector, useDispatch
+
+### redux middleware
+
+1. redux-logger
